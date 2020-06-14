@@ -2,8 +2,9 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
-      options: {},
+      options: {basePath : `blog`},
     },
+    `gatsby-plugin-sass`,
   ],
   // Customize your site metadata:
   siteMetadata: {
