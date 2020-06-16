@@ -1,11 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import Styles from "./index.module.scss"
+import aurora from "../images/aurora.jpg"
 
 export default function Home() {
   return (
     <div id="wrapper">
-      <div id="header">HOME PAGE</div>
+      <div className={Styles.header}>
+        <img src={aurora} alt="aurora" />
+      </div>
 
       <div className={Styles.nav}>
         <ul>

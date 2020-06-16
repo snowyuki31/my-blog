@@ -1,5 +1,6 @@
 import merge from "deepmerge"
 import defaultThemeColors from "gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors"
+import "katex/dist/katex.min.css"
 
 /*
  * Want to change your theme colors?

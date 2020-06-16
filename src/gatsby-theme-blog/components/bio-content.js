@@ -1,5 +1,6 @@
 import React from "react"
 import { Styled } from "theme-ui"
+import "katex/dist/katex.min.css"
 
 /**
  * Change the content to add your own bio

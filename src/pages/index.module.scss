@@ -4,6 +4,7 @@
     margin: 0px;  
     width: auto;
     border-radius: 0px;
+    opacity: 0.65;
     a {
         display: block;
         height: 50px;
@@ -15,10 +16,28 @@
     }
 
     background-color: #404040;
-    &:hover{ background: #202020; }
+    &:hover{ background: #202020; opacity: 1.0; }
 }
 
 /* Organism Component */
+/* Header */
+.header {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background-color: snow;
+    margin: 0;
+    padding: 0;
+
+    img{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        opacity: 0.85;
+    }
+}
+
 /* Menubar */
 .nav {
     width: auto;
@@ -39,5 +58,3 @@
         margin-right: 5px;
     }
 }
-
-/* Page */
