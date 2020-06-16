@@ -2,7 +2,7 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
-      options: { basePath: `blog` },
+      options: { basePath: `/blog` },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -18,13 +18,22 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //   },
+    // },
     `gatsby-plugin-sass`,
   ],
   // Customize your site metadata:
   siteMetadata: {
-    title: `MY BLOG`,
-    author: `My Name`,
+    title: `Snow's Homepage`,
+    titleTemplate: `%s | Snow's Homepage`,
+    author: `Snow`,
     description: `My site description...`,
+    image: ``,
+    url: `https://www.snowyuki31.com/`,
     social: [
       {
         name: `twitter`,
@@ -35,5 +44,6 @@ module.exports = {
         url: `https://github.com/gatsbyjs`,
       },
     ],
+    twitterUsername: "",
   },
 }

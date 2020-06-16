@@ -1,6 +1,5 @@
 import merge from "deepmerge"
 import defaultThemeColors from "gatsby-theme-blog/src/gatsby-plugin-theme-ui/colors"
-import "katex/dist/katex.min.css"
 
 /*
  * Want to change your theme colors?
@@ -8,19 +7,19 @@ import "katex/dist/katex.min.css"
  * to go from default purple to a blue theme
  */
 
-// const darkBlue = `#007acc`
-// const lightBlue = `#66E0FF`
-// const blueGray = `#282c35`
+const darkBlue = `#007acc`
+const lightBlue = `#66E0FF`
+const blueGray = `#282c35`
 
 export default merge(defaultThemeColors, {
-  // text: blueGray,
-  // primary: darkBlue,
-  // heading: blueGray,
-  // modes: {
-  //   dark: {
-  //     background: blueGray,
-  //     primary: lightBlue,
-  //     highlight: lightBlue,
-  //   },
-  // },
+  text: blueGray,
+  primary: darkBlue,
+  heading: blueGray,
+  modes: {
+    dark: {
+      background: blueGray,
+      primary: lightBlue,
+      highlight: lightBlue,
+    },
+  },
 })

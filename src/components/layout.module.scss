@@ -32,7 +32,7 @@
     h1 {
         width: auto;
         margin-right: 15%;
-        font-size: 7.5rem;
+        font-size: 5rem;
         text-align: right;
         font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         color: rgb(200, 200, 200);
@@ -54,10 +54,8 @@
 .header {
     position: relative;
     width: auto;
-    height: auto;
+    height: 275px;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
 
     img{
         display: block;
