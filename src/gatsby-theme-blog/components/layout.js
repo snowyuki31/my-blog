@@ -16,7 +16,7 @@ export default ({ children, ...props }) => {
         <link rel="stylesheet" href={webfontURL} />
       </Helmet>
 
-      <Layout />
+      <Layout title="Blog" />
       <Styled.root>
       <div>
         <div
