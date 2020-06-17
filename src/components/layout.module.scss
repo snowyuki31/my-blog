@@ -5,7 +5,7 @@
     width: auto;
     border-radius: 0px;
     opacity: 0.65;
-    a, &:visited {
+    a {
         display: block;
         height: 7.5vh;
         line-height: 7.5vh;
@@ -17,7 +17,7 @@
     }
 
     background-color: #404040;
-    &:hover{ background: #202020; opacity: 1.0; }
+    &:hover, &:focus { background: #202020; opacity: 1.0; }
 
     &:active { background-color: black; }
 }

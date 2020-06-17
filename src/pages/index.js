@@ -16,10 +16,10 @@ export default function Home() {
       </div>
 
       <div className={Styles.nav}>
-        <p className={Styles.btn_now}><p>HOME</p></p>
-        <p className={Styles.btn}><Link to="/about">ABOUT</Link></p>
-        <p className={Styles.btn}><Link to="/works">WORKS</Link></p>
-        <p className={Styles.btn}><Link to="/blog">BLOG</Link></p>
+        <div className={Styles.btn_now}><p>HOME</p></div>
+        <div className={Styles.btn}><Link to="/about">ABOUT</Link></div>
+        <div className={Styles.btn}><Link to="/works">WORKS</Link></div>
+        <div className={Styles.btn}><Link to="/blog">BLOG</Link></div>
       </div>
     </div>
   )

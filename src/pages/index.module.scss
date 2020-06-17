@@ -17,7 +17,7 @@
     width: 50%;
     border-radius: 0px;
     opacity: 0.65;
-    a, &:visited {
+    a {
         display: table-cell;
         width: 100%;
         text-align: center;
@@ -29,9 +29,20 @@
     }
 
     background-color: #404040;
-    &:hover{ background: #202020; opacity: 1.0; }
+    &:hover, &:focus{ 
+        background: #202020;  
+        opacity: 1.0; 
+        a {
+            color: rgb(240, 240, 240);
+        }
+    }
 
-    &:active { background-color: black; }
+    &:active { 
+        background-color: black; 
+        a{
+            color: white;
+        }
+    }
 }
 
 .btn_now {
