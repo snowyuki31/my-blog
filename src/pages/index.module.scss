@@ -1,3 +1,13 @@
+@function get_vw($size, $viewport:1900){
+    $rate: 100 / $viewport;
+    @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:80){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
 /* Atomic Component, Molecule Component */
 .btn {
     position: relative;
@@ -13,17 +23,33 @@
         text-align: center;
         vertical-align: middle;
         text-decoration: none;
-        color: snow;
+        color: white;
         font-size: 45px;
         font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
-    .clicked {
-        background: #202020; opacity: 1.0;
-    }
-
     background-color: #404040;
     &:hover{ background: #202020; opacity: 1.0; }
+}
+
+.btn_now {
+    position: relative;
+    display: table;  
+    margin: 0px;
+    height:50%;  
+    width: 50%;
+    border-radius: 0px;
+    background-color: rgb(200, 200, 200);
+
+    p {
+        display: table-cell;
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        font-size: 45px;
+        font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 }
 
 .title {
@@ -39,10 +65,12 @@
 
     h1 {
         width: 85%;
-        font-size: 5rem;
         text-align: right;
-        font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+        @include fz_vw(120);
+        text-decoration: none;
         color: rgb(200, 200, 200);
+        font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 }
 

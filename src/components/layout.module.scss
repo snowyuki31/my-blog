@@ -7,12 +7,12 @@
     opacity: 0.65;
     a {
         display: block;
-        height: 50px;
-        line-height: 50px;
+        height: 7.5vh;
+        line-height: 7.5vh;
         text-align: center;
         text-decoration: none;
-        color: snow;
-        font-size: 18px;
+        color: white;
+        font-size: 21px;
         font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
@@ -36,6 +36,13 @@
         width: 85%;
         font-size: 2rem;
         text-align: right;
+        font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: rgb(200, 200, 200);
+    }
+
+    a {
+        font-size: 2rem;
+        text-decoration: none;
         font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         color: rgb(200, 200, 200);
     }

@@ -9,7 +9,9 @@ export default function Layout({ children }) {
       <SEO></SEO>
       <div className={Styles.header}>
         <div className={Styles.title_area}>
-          <div className={Styles.title}><h1>SNOW'S</h1><h1>PORTFOLIO</h1></div>
+          <div className={Styles.title}>
+            <h1><Link to="/">SNOW'S</Link></h1><h1><Link to="/">PORTFOLIO</Link></h1>
+          </div>
         </div>
       </div>
 

@@ -29,7 +29,7 @@ export default ({ children, ...props }) => {
         >
           {children}
         </div>
-        </div>
+      </div>
       </Styled.root>
     </div>
   )

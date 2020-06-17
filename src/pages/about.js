@@ -1,8 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
+import Content from "../components/content"
 
 export default function About() {
   return (
-    <Layout>This is about page.</Layout>
+    <div>
+      <Layout />
+      <Content> HELLO </Content>
+    </div>
   )
 }

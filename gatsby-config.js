@@ -1,29 +1,31 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-katex`,
+            resolve: `gatsby-remark-images`,
             options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`,
+              maxWidth: 1380,
+              linkImagesToOriginal: false,
             },
           },
+          { resolve: `gatsby-remark-copy-linked-files` },
+          { resolve: `gatsby-remark-smartypants` },
+          { resolve: `gatsby-remark-katex` },
         ],
+        remarkPlugins: [require(`remark-slug`)],
       },
     },
     {
       resolve: `gatsby-theme-blog`,
-      options: { basePath: `/blog` },
+      options: {
+        basePath: `/blog`,
+        mdxOtherwiseConfigured: true,
+      },
     },
-    // {
-    //   resolve: `gatsby-plugin-typography`,
-    //   options: {
-    //     pathToConfigModule: `src/utils/typography`,
-    //   },
-    // },
     `gatsby-plugin-sass`,
   ],
   // Customize your site metadata:
