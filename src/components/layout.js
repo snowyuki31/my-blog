@@ -8,7 +8,9 @@ export default function Layout({ children }) {
     <div id="wrapper">
       <SEO></SEO>
       <div className={Styles.header}>
-        <div className={Styles.title_area}><h1>SNOW'S</h1><h1>PORTFOLIO</h1></div>
+        <div className={Styles.title_area}>
+          <div className={Styles.title}><h1>SNOW'S</h1><h1>PORTFOLIO</h1></div>
+        </div>
       </div>
 
       <div className={Styles.nav}>

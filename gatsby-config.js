@@ -1,10 +1,6 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
-      options: { basePath: `/blog` },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -17,6 +13,10 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-theme-blog`,
+      options: { basePath: `/blog` },
     },
     // {
     //   resolve: `gatsby-plugin-typography`,

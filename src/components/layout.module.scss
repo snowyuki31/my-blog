@@ -13,30 +13,42 @@
         text-decoration: none;
         color: snow;
         font-size: 18px;
+        font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     background-color: #404040;
     &:hover{ background: #202020; opacity: 1.0; }
 }
 
-.title_area {
+.title {
     position: absolute;
+    overflow: hidden;
     width: 100%;
+    margin: 0;
     top: 50%;
     left: 50%;
+    right: 10%;
     transform: translate(-50%, -50%);
     font-style: bold;
-    text-align: center;
     z-index: 14;
 
     h1 {
-        width: auto;
-        margin-right: 15%;
-        font-size: 5rem;
+        width: 85%;
+        font-size: 2rem;
         text-align: right;
         font-family: HelveticaNeue-CondensedBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         color: rgb(200, 200, 200);
     }
+}
+
+/* Organism Component */
+/* Title */
+.title_area {
+    position: absolute;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    left: 50%;
 }
 
 .wrapper {
@@ -54,7 +66,7 @@
 .header {
     position: relative;
     width: auto;
-    height: 275px;
+    height: 15vh;
     overflow: hidden;
 
     img{
