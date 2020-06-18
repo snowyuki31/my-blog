@@ -20,6 +20,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/icon2.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
       resolve: `gatsby-theme-blog`,
       options: {
         basePath: `/blog`,
