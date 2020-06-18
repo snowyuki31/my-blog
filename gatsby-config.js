@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/images/icon2.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon5.png`, // This path is relative to the root of the site.
       },
     },
     {
