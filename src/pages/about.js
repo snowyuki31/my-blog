@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div>
       <Layout title="About"/>
-      <Content> HELLO </Content>
+      <Content> </Content>
     </div>
   )
 }

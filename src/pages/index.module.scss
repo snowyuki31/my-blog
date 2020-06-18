@@ -30,7 +30,7 @@
 
     background-color: #404040;
     &:hover, &:focus{ 
-        background: #202020;  
+        background: #202020;
         opacity: 1.0; 
         a {
             color: rgb(240, 240, 240);
@@ -73,12 +73,14 @@
     left: 50%;
     right: 10%;
     transform: translate(-50%, -50%);
+    background-color: white;
     font-style: bold;
     z-index: 14;
 
     h1 {
         width: 85%;
         text-align: right;
+        background-color: white;
 
         @include fz_vw(120);
         text-decoration: none;
@@ -95,6 +97,7 @@
     width: 50%;
     height: 100%;
     left: 50%;
+    background-color: white;
 }
 
 /* Header */
@@ -105,6 +108,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+    background-color: white;
 
     img{
         display: block;
