@@ -6,7 +6,7 @@ import Footer from "gatsby-theme-blog/src/components/home-footer"
 import PostList from "gatsby-theme-blog/src/components/post-list"
 
 const Posts = ({ location, posts, siteTitle, socialLinks }) => (
-  <Layout location={location} title={siteTitle}>
+  <Layout location={location} title={siteTitle} post={false}>
     <SEO title="Blog" />
     <main>
       <PostList posts={posts} />

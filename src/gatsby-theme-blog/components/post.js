@@ -20,7 +20,7 @@ const Post = ({
   previous,
   next,
 }) => (
-  <Layout location={location} title={title}>
+    <Layout location={location} title={title} post={true}>
     <SEO
       title={post.title}
       description={post.excerpt}
