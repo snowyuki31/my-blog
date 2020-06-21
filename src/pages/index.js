@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 export default function Home() {
   return (
     <div className={Styles.page}>
-      <SEO title='SNOW'></SEO>
+      <SEO title='HOME'></SEO>
       <div className={Styles.header}>
         <div className={Styles.title_area}>
           <div className={Styles.title}>
