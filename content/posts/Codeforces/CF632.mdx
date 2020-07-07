@@ -1,0 +1,40 @@
+---
+slug: /competitive-programming/CF632
+title: Codeforces Round 632
+date: 2020-07-06
+
+keywords:
+  - CF
+  - 
+---
+
+## C. Eugene and an array
+[問題](https://codeforces.com/blog/entry/75802)
+
+今まであまり解いたことのなかった尺取り法 + setで集合管理という問題。
+
+---
+
+$A$の累積和の配列$P$を考える
+
+$P_0 = 0, P_i = a_1 + a_2 + \dots + a_i ~ (1 \leq i \leq N)$
+
+区間$[i, j]$の連続部分列(subarray)の和が$0$になる条件は、
+
+$P_j - P_{i-1} = 0$
+
+すなわち
+
+$P_j = P_{i-1}$
+
+である。
+
+ここから、区間$[i, j]$のsubarrayがgoodである条件は、$P_i, \dots P_j$がすべてdistinctである、といえる。
+
+
+ここで左端$l$を固定して、右端$r$を動かしていくことを考える。
+
+もし$P_l, \dots, P_r$がdistinctであれば、左端$l$を含むsubarrayは、$r - l + 1$通り作ることができる。
+
+したがって、setに$P_r$を入れていってdistinctでなくなる直前まで右端を動かし答えに$r - l + 1$を加え、左端を一つ動かすことを繰り返す尺取り法で$O(N\log N)$解くことができる。
+

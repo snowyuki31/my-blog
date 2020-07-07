@@ -1,0 +1,25 @@
+---
+slug: /competitive-programming/CFEdu87
+title: Educational Codeforces Round 87
+date: 2020-07-07
+
+keywords:
+  - CF
+  - 
+---
+
+## D. Multiset
+
+[問題](https://codeforces.com/contest/1354/problem/D)
+
+[ARC033 C](https://atcoder.jp/contests/arc033/tasks/arc033_3)とほぼ同じ問題。
+
+挿入、削除、k-th order statisticsを$O(\log N)$で求める必要がある。
+
+平衡二分木で解くことができるが、C++のsetにはk-th order statisticsを求められないので実装する必要がある。
+
+Fenwick Tree(BIT)を使うともう少し簡単に求められて、ある値が何個あるかをBIT上に保存する。
+
+するとk-th order statisticsは、BIT上の和について二分探索を行うだけで求まってしまう。
+
+今回の場合はシンプルに解けるが、値の制約が大きい場合は座標圧縮する必要アリ。
