@@ -1,0 +1,59 @@
+---
+slug: /competitive-programming/CF618-div2
+title: Codeforces Round 618 (div 2)
+date: 2020-07-08
+
+keywords:
+  - CF
+  - 
+---
+
+## C. Anu Has a Function
+
+[問題](https://codeforces.com/contest/1300/problem/C)
+
+関数$f : f(x, y) = (x | y) - y$の性質をよく考えると、
+
+操作によって$y$のbitが立ってる位置のフラグは全て$0$になってしまう。
+
+また、この操作を繰り返し行っても、最初の値より大きくなることが無いことが分かる。
+
+したがって、数列$a$の中で2箇所以上でフラグが立っている位置のbitは操作の後に0となるとみなしてよい。
+
+数列$a$の中でこのようなフラグを除いたときの最大の値を先頭に持ってくればよい。
+
+```c++
+void solve(int& N, vector<int>& A){
+    vector<int> bit(32);
+    for(auto a : A){
+        rep(i, 32) if((1 << i) & a) ++bit[i];
+    }
+    int idx;
+    int max_val = -1;
+    for(int i = 0; i < N; ++i){
+        int tmp = 0;
+        rep(j, 32) if(bit[j] == 1 and ((1 << j) & A[i])) tmp += 1 << j;
+        if(chmax(max_val, tmp)) idx = i;
+    }
+    swap(A[0], A[idx]);
+}
+```
+---
+
+この$f$は差集合演算である。
+
+## D. Aerodynamic
+
+[問題](https://codeforces.com/contest/1299/problem/B)
+
+実験の末にたどり着いた結論としては、
+
+「Nが偶数」かつ「対辺が平行」の多角形のみ成立するというもの。
+
+これ自体は偏角ソートを行えば、簡単に判定できる。
+
+
+操作の性質に注目すると、中心対称であることが分かり、わざわざ実験しなくても上の条件を導くことができる。
+
+操作の対称性に注目する問題だが、幾何問題が少ないのもあり中心対称に注目する、という観点は忘れがち。
+
