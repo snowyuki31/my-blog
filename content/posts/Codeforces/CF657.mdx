@@ -1,0 +1,138 @@
+---
+slug: /competitive-programming/CF657-div2
+title: Codeforces Round 657 (div 2)
+date: 2020-07-20
+
+keywords:
+  - CF
+  - 
+---
+
+## A. Acacius and String
+
+[問題](https://codeforces.com/contest/1379/problem/A)
+
+'?'を含む英小文字列$S$の'?'を適当に置き換えて、"abacaba"が部分文字列としてちょうど1回現れるようにできるか？という問題。
+
+"abacaba"として扱える文字列の位置を全探索し、さらにその文字列を"abacaba"として扱った時に本当にちょうど1回現れるかどうかを確認すれば良いです。
+
+十分性チェックみたいな発想で、A問題にしては結構難しいな、という印象です。
+
+```cpp
+void solve(ll N, string S){
+  bool okay = false;
+  rep(i, N){
+      string tmp = S;
+      bool flag = true;
+      rep(j, 7){
+          if(tmp[i + j] != X[j] and tmp[i + j] != '?') flag = false;
+          else if(tmp[i + j] == '?') tmp[i + j] = X[j];
+      }
+      if(!flag) continue;
+
+      for(auto& t : tmp) if(t == '?') t = 'x';
+
+      ll ct = 0;
+      rep(k, N) if(k + 6 < N) ct += tmp.substr(k, 7) == X;
+
+      if(ct == 1){
+          print("YES");
+          print(tmp);
+          okay = true;
+          break;
+      }
+  }
+
+  if(!okay) print("NO");
+  
+  return 0;
+}
+```
+
+## B. Dubious Cyrpto
+
+[問題](https://codeforces.com/contest/1379/problem/B)
+
+$m, l, r$が与えられ、$m = na + b - c$を満たすような$(a, b, c, n) ~ (l \leq a, b, c \leq r, ~ n \gt 0)$の組を見つける問題。
+
+まず、$b, c$は独立に値を取れることに注目します。
+
+$a$を固定してあげて、
+
+$na = m - b + c$
+
+と式変形してあげると、この値域は
+
+$m - r + l \leq na \leq m - l + r$
+
+となります。
+
+この範囲に非負の$a$の倍数が存在すればよいことが分かります。
+
+この範囲での最大の$a$の倍数$x$は、$x = (m - l + r) - (m - l + r) \% a$なので
+
+$x \gt 0$であれば存在します。
+
+さて、ここで$na = x$が求まりました。このとき、
+
+$b - c = m - x$
+
+が成り立つような$b, c$の組を見つければよいです。
+
+ただし、$m - x \gt r - l$の場合は存在しないことに注意です。
+
+$m - x \leq r - l$の場合は必ず条件を満たす$b, c$が存在します。
+
+一番単純な求め方は、端に注目する方法です。
+
+$m - x \leq 0$であれば、$b \leq c$であるので
+
+$b = m - x + r, c = r$とします。
+
+$m - x \geq 0$であれば、$b = m - x + l, c = l$とすればよいです。
+
+以上は$O(1)$なので固定した$a$を$[l, r]$について全探索すれば、$O(r - l)$で答えが求まります。
+
+```cpp
+
+void solve(ll l, ll r, ll m){
+    for (ll a = l; a <= r; ++a){
+        ll x = (m - l + r) - (m - l + r) % a;
+        if(x <= 0) continue;
+        ll b, c;
+        if(m - x > r - l) continue;
+        if(m - x <= 0) b = r + m - x, c = r;
+        else b = l + m - x, c = l;
+
+        cout << a << " " << b << " " << c << '\n';
+        return;
+    }
+}
+
+```
+
+## C. Choosing flowers
+
+[問題](https://codeforces.com/contest/1379/problem/C)
+
+$m$種類の花がたくさんあり、$i$種類目の花を初めて買うと$a_i$、$2$個目以降は$b_i$の幸福度が得られる。
+
+花をちょうど$n$個買うとき、幸福度の最大値はいくらか？
+
+落ち着いて条件を整理すると、以下の性質が見えてきます。
+
+1. まず、2個以上買う花の種類は一つでよい。なぜなら、花x, yを2個以上買うとして、$b_x > b_y$が成り立つとき、$b_y$の代わりに$b_x$を買えばよいからである。
+
+2. 2個以上買う花として$b_x$を選んだとき、$a_i > b_x$を満たす花は1本ずつ買った方がよい。
+
+コンテスト中は、1の条件から飛躍して、$b_{\max}$を買えばよいのでは、と詰まってしまったのですが。
+
+確かに$b_{\max}$のときの$a$の値が非常に小さいときなど、必ずしも最大にならないケースはありそうです。
+
+2つの性質から、2本以上買う$b_i$を全探索しつつ、$a_j > b_i$となる花を買えば最大値が求まることが分かります。
+
+これを高速に実現するには、$a$について降順ソートした上で累積和を求めておき、$a_j > b_i$となる$j$の範囲を二分探索で求めればよいです。
+
+計算量は$O(m \log m)$となります。
+
+いかに条件を拡大解釈しないか、みたいな部分がありました。意外とこういうのにハマっちゃうと抜け出せないですね。
