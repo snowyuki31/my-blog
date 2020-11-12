@@ -8,7 +8,7 @@ export default function About() {
       <Layout title="About" />
       <Content>
         <iframe
-          src="https://drive.google.com/file/d/1etUS-Jnu6yro6zCG8i4XvLv4wXq4zOV2/preview"
+          src="https://drive.google.com/file/d/17Em7gsbBPVAzQFSrvR1oYp6rTUMiXnfZ/preview"
           width="800"
           height="800"
         ></iframe>
