@@ -2,13 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import Card from "../components/card"
 import Content from "../components/content"
-import Styles from "./activities.modules.scss"
 
 import Portfolio from "../images/Portfolio.png"
 
 export default function Works() {
   return (
-    <div>
+    <div style={{color: "white"}}> 
       <Layout title="Activities" />
       <Content>
         <div>
@@ -26,7 +25,7 @@ export default function Works() {
         <p>実証実験を行って得られたデータやYahoo!のもつ豊富なユーザデータを分析することで新規性のあるモデルを構築・提案しています。</p>
         <p>現在、WSDMにdemonstration paperを提出中。21年2月にfull paperを執筆予定。</p>
         <p>他、社内技術発表会で発表、テックブログ執筆など。</p>
-        <a href="https://techblog.yahoo.co.jp/entry/2020091530016630/">Yahoo! Japan Tech Blog</a>
+        <a href="https://techblog.yahoo.co.jp/entry/2020091530016630/" style={{color: "white"}}>Yahoo! Japan Tech Blog</a>
         
           
         <h2>Toyota Research Institute - Advanced Development, Inc. (TRI-AD)</h2> 
@@ -37,8 +36,8 @@ export default function Works() {
         <hr></hr>
         他の活動としては以下のようなものがあります
         <li>当ブログ兼ポートフォリオサイト Gatsby, AWS Amplifyで作成</li>
-        <li>研究室内slack用のツール作成 <a href="https://qiita.com/snowyuki31/items/5c46b7870f2ae6958973">Qiita</a></li>
-        <li>競技プログラミング <a href="https://atcoder.jp/users/hirono999">AtCoder</a></li>
+        <li>研究室内slack用のツール作成 <a href="https://qiita.com/snowyuki31/items/5c46b7870f2ae6958973" style={{color: "white"}}>Qiita</a></li>
+        <li>競技プログラミング <a href="https://atcoder.jp/users/hirono999" style={{color: "white"}}>AtCoder</a></li>
         <li>スマホアプリのUX Designerインターンシップ, リーンスタートアップベースのUXデザイン業務で、実際にユーザにインタビューなどを通して新しい機能の提案まで行いました</li>
         <li>Cookpad Summer Internship 2020参加, Ruby on RailsでCookpadのサービス開発のフローを体験</li>
       </div>
