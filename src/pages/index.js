@@ -18,7 +18,7 @@ export default function Home() {
       <div className={Styles.nav}>
         <div className={Styles.btn_now}><p>HOME</p></div>
         <div className={Styles.btn}><Link to="/about">ABOUT</Link></div>
-        <div className={Styles.btn}><Link to="/works">WORKS</Link></div>
+        <div className={Styles.btn}><Link to="/activities">ACTIVITIES</Link></div>
         <div className={Styles.btn}><Link to="/blog">BLOG</Link></div>
       </div>
     </div>

@@ -7,11 +7,13 @@ export default function About() {
     <div>
       <Layout title="About" />
       <Content>
-        <iframe
-          src="https://drive.google.com/file/d/17Em7gsbBPVAzQFSrvR1oYp6rTUMiXnfZ/preview"
-          width="800"
-          height="800"
-        ></iframe>
+        <div class="google_drive">
+          <iframe
+            src="https://drive.google.com/file/d/1TKI522-9Fh6eZndT6I7JmmGSvgDAEBaA/preview"
+            width="800"
+            height="1100"
+          ></iframe>
+        </div>
       </Content>
     </div>
   )

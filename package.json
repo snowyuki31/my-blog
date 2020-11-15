@@ -9,6 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "gatsby": "^2.22.15",
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-sass": "^2.3.4",
