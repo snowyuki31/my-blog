@@ -23,7 +23,7 @@ export default function Works() {
         <h2>Yahoo! Japan Research</h2>
         <p>ユーザ興味推定モデルの性能改善を機械学習でどのよう実現するか？という研究を行っています。</p>
         <p>実証実験を行って得られたデータやYahoo!のもつ豊富なユーザデータを分析することで新規性のあるモデルを構築・提案しています。</p>
-        <p>現在、WSDMにdemonstration paperを提出中。21年2月にfull paperを執筆予定。</p>
+        <p>WSDM2021にdemonstration paperが通りました。21年2月にfull paperを執筆予定。</p>
         <p>他、社内技術発表会で発表、テックブログ執筆など。</p>
         <a href="https://techblog.yahoo.co.jp/entry/2020091530016630/" style={{color: "white"}}>Yahoo! Japan Tech Blog</a>
         
